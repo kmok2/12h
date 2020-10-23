@@ -7,8 +7,8 @@
   <h2>【最新情報】</h2>
   <div>
   2020/10/23 たけし、痴漢をはたらく
-  2020/10/23 数学αプリント 忘れずに持ってくる
-  2020/10/23 12H非公式ホームページを開設しました。
+  2020/10/23 
+    12H非公式ホームページを開設しました。
   </div>
   <style>
   h1 {
@@ -18,13 +18,15 @@
   border-left: solid 5px #7db4e6;/*左線*/
   border-bottom: solid 3px #d7d7d7;/*下線*/
 }h1{font-size: 30px;}
-p{font-size: 10px;
+p{font-size: 8px;
   padding: 0.5em
 }
 
 h1{float:right;}
+{font-family:ゴシック体}
 p{float:right;}
-
+h2{background:lightgray}
+div{background: lightblue}
   </style>
   <img src=>
   <meta charset="UTF-8">
@@ -39,8 +41,18 @@ p{float:right;}
   <!-- Custom Styles -->
   <link rel="stylesheet" href="style.css">
 </head>
+<!--ここから掲示板開始!--><form action="s.php"method="post"><table><tr><th>ネーム</th><td><input type="text"name="name"size="20"></td></tr><tr><th>記事</th><td><textarea name="txt"rows="2"cols="20"tabindex="0"></textarea></td></tr></table><input type="submit"value="投稿"></form><br><?php
+$log = 5; //表示するログの数初期は、5
+$fp = fopen('log.html', 'r');
+for($i=0; $i <$log; $i++){
+ $fps = fgets($fp);
+ print $fps;
+}
+?><!--ここから掲示板終了-->
+
 
 <body>
+  
   <!-- Project -->
   <script src="main.js"></script>
 </body>
